@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import './EditTaskForm.css'; // Import the CSS file for styling
 
-
-const EditTaskForm = ({ task, updateTask }) => {
+const EditTaskForm = ({ task, updateTask, closeForm }) => {
   const [name, setName] = useState(task.name);
   const [text, setText] = useState(task.text);
   const [due_date, setDueDate] = useState(task.due_date);
@@ -12,13 +11,17 @@ const EditTaskForm = ({ task, updateTask }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const updatedTask = {
-      id: task.id, // Assuming 'id' is a required field for updating
+      id: task.id,
       name,
       text,
       due_date,
       status,
     };
     updateTask(updatedTask);
+  };
+
+  const handleClose = () => {
+    closeForm(); // Call the function to close the form
   };
 
   return (
@@ -42,6 +45,7 @@ const EditTaskForm = ({ task, updateTask }) => {
           <input type="date" value={due_date} onChange={(e) => setDueDate(e.target.value)} />
         </div>
         <button type="submit">Update Task</button>
+        <button type="button" onClick={handleClose}>Close</button> {/* Close button */}
       </form>
     </div>
   );

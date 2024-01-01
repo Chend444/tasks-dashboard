@@ -50,6 +50,10 @@ const TaskList = () => {
     setEditTask(task);
   };
 
+    const handleCloseEditForm = () => {
+        setEditTask(null); // Function to close the EditTaskForm
+      };
+
   const handleSort = (result) => {
     if (!result.destination) return;
 
@@ -136,7 +140,7 @@ const TaskList = () => {
         </button>
       </div>
 
-      {editTask && <EditTaskForm task={editTask} updateTask={handleUpdateTask} />}
+      {editTask && <EditTaskForm task={editTask} updateTask={handleUpdateTask} closeForm={handleCloseEditForm} />}
       <NewTaskForm addTask={handleAddTask} />
     </div>
   );
