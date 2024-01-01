@@ -1,0 +1,18 @@
+/* SearchBar.css */
+
+/* Style for the container of the input */
+.search-bar-container {
+  margin-bottom: 20px;
+}
+
+/* Style for the input field */
+.search-input {
+  width: 50%;
+  max-width: 300px; /* Set a maximum width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  /* Add any other styles you prefer */
+}

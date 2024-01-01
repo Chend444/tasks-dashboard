@@ -1,0 +1,43 @@
+.task-list-container {
+  text-align: center;
+}
+
+.task-list-container h2 {
+  margin-top: 20px; /* Add space above the h2 */
+}
+
+.task-table {
+  margin: 0 auto; /* Center the table */
+  border-collapse: collapse; /* Ensure table borders stick together */
+}
+
+.task-table tr.dragging {
+  /* Style for the dragged item */
+  background-color: lightblue;
+}
+
+.task-table tr.placeholder {
+  /* Style for the placeholder where an item will be dropped */
+  background-color: lightgray;
+}
+
+.task-table th {
+  background-color: #f0f0f0; /* Light gray background color for headers */
+  border: 1px solid #ddd; /* Add a border around each header cell */
+  padding: 8px; /* Add padding for better appearance */
+}
+
+.task-table td {
+  border: 1px solid #ddd; /* Add a border around each data cell */
+  padding: 8px; /* Add padding for better appearance */
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+}
